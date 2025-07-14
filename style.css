@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--background-cl);
+  color: var(--text-cl);
+}
+
+/* variable */
+:root {
+  --text-cl: rgb(255, 255, 255);
+  --background-cl: #030615;
+}
+/* ==================common=================== */
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.main__container {
+  width: 1250px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: var(--background-cl); */
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  font-family: inherit;
+}
+/* ==================header=================== */
+.header {
+  background-color: var(--background-cl);
+  margin-bottom: 50px;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+.header .body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: "Press Start 2P", system-ui;
+  /* background-color: var(--background-cl); */
+}
+
+.header .logo {
+  font-family: "Press Start 2P", system-ui;
+  color: var(--text-cl);
+  cursor: default;
+  font-size: 1.125rem;
+}
+
+.nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+.nav li {
+  list-style-type: none;
+  transition: 0.5s;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: rgba(240, 248, 255, 0.523);
+}
+
+/* ==================Hero banner=================== */
+.hero__banner {
+  margin-top: 200px;
+}
+
+.hero__section {
+  text-align: center;
+}
+
+.hero__desc {
+  margin: 20px;
+}
+
+.hero__section .hero__heading {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 1.5rem;
+  transition: all 0.5s;
+}
+
+.hero__section .hero__icon {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__icon .hero__icon--social {
+  width: 50px;
+  height: auto;
+  background-color: var(--text-cl);
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: 2px 2px 4px rgba(23, 37, 84, 0.4),
+    8px 8px 8px rgba(23, 37, 84, 0.2);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.hero__section .hero__heading:hover {
+  letter-spacing: 5px;
+}
+
+.hero__icon .hero__icon--social:hover {
+  transform: scale(1.2);
+}
+
+.btn-hero {
+  margin-top: 40px;
+  transition: 0.2s;
+}
+.btn-hero:hover {
+  transform: translateY(-10px);
+}
+
+/* ==================My skills=================== */
+.section__skills {
+  margin-top: 150px;
+}
+
+.main__technical-skill {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.section__main-skill .skill__item li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.section__main-skill .skill__item .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 10px 10px 10px 5px;
+}
+
+.heading__h2 {
+  margin: 40px 0;
+  font-family: "Press Start 2P", system-ui;
+  text-align: center;
+}
+
+.skill__heading {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 1rem;
+}
+
+/* ==================My project=================== */
+.section__project {
+  margin-top: 200px;
+}
+
+.project__container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border: 20px solid black;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.project__container img:hover {
+  transform: scale(1.1);
+}
+
+.project__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 50px;
+}
+
+.project__container-desc {
+  justify-items: center;
+  align-items: center;
+}
+
+.project__desc-heading,
+.project__desc {
+  margin: 20px;
+}
+
+.btn__livedemo {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn__livedemo:hover {
+  background-color: aliceblue;
+  color: #030615;
+  transform: translateY(-5px);
+}
+
+/* ==================About me=================== */
+.section__about {
+  margin-top: 200px;
+}
+.about__media .about__profile {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.about__desc-right {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.about__education,
+.about__experience {
+  width: 250px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: aliceblue;
+  color: #030615;
+  text-align: center;
+}
+
+.about__desc-para {
+  margin: 40px;
+}
+
+/* ==================contact me block==================== */
+.contact__me {
+  margin-top: 200px;
+}
+
+#email {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 580px;
+  height: 40px;
+  /* margin: 1rem; */
+}
+
+textarea {
+  width: 100%;
+  max-width: 580px;
+  height: 200px;
+  resize: none; /* ❌ không thể kéo rộng hay cao */
+  border-radius: 20px;
+  /* margin-top: 20px; */
+}
+
+.form__contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form__contact form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.form__control label {
+  display: block;
+  margin: 10px 0 10px;
+}
+
+.form__btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==================contact me block==================== */
+.footer {
+  margin-top: 100px;
+}
+
+.footer__nav,
+.footer__container p {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}

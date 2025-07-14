@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header fixed">
+      <div class="main__container">
+        <div class="body">
+          <!-- logo -->
+          <p class="logo">&lt;/&gt;harry</p>
+
+          <!-- nav -->
+          <nav class="nav">
+            <ul id="navbar__list--pc">
+              <li><a href="#/">Home</a></li>
+              <li><a href="#project">Projects</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- btn action -->
+          <div class="action">
+            <a href="#!" class="btn btn-signup">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- tablet mobile header -->
+    <div class="mobile-header">
+      <!-- tablet/mobile -->
+      <input
+        type="checkbox"
+        name="menu-checkbox"
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+      <label for="menu-checkbox">
+        <svg
+          class="menu-header__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </label>
+
+      <!-- overlay -->
+      <label for="menu-checkbox" class="menu-overlay"></label>
+
+      <!-- menu content -->
+      <div class="menu-drawer">
+        <div class="menu-drawer__top">
+          <label for="menu-checkbox">
+            <svg
+              class="close__menu"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <path
+                fill="currentColor"
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+              />
+            </svg>
+          </label>
+        </div>
+        <!-- logo -->
+
+        <!-- nav mobile -->
+        <ul id="navbar__list--mobile"></ul>
+        <!-- use javascript to copy navbar -->
+        <script>
+          const navPC = document.querySelector("#navbar__list--pc");
+          const navMobile = document.querySelector("#navbar__list--mobile");
+          navMobile.innerHTML = navPC.innerHTML;
+        </script>
+      </div>
+    </div>
+
+    <!-- main content -->
+    <main class="main__content">
+      <!-- hero banner -->
+      <div class="hero__banner">
+        <div class="main__container">
+          <div class="hero__section">
+            <!-- hero heading -->
+            <h1 class="hero__heading">I write code & build projects :P</h1>
+            <!-- hero desc -->
+            <p class="hero__desc">
+              Hi, I'm Harry, a software developer who loves building cool things
+              with code.
+            </p>
+            <!-- hero social -->
+            <div class="hero__icon">
+              <img
+                src="./assets/icon/facebook.png"
+                alt="facebook"
+                class="hero__icon--social"
+                onclick="location.href='https://www.facebook.com/datang.nguyen.9/'"
+              />
+              <img
+                src="assets/icon/github.png"
+                alt="github"
+                class="hero__icon--social"
+                onclick="location.href='https://github.com/NBT09021994/'"
+                target="_blank"
+              />
+              <img
+                src="assets/icon/linkedin.png"
+                alt="linkedin"
+                class="hero__icon--social"
+                onclick="location.href='https://www.linkedin.com/in/nguyen-ba-thien-aa4721220/'"
+              />
+            </div>
+            <button href="#!" class="btn btn-hero">View More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- my skills -->
+      <div class="my__skill">
+        <div class="main__container">
+          <div id="experience" class="section__skills">
+            <div class="heading__h2">
+              <h2>My Skills</h2>
+            </div>
+            <div class="main__technical-skill">
+              <!-- 4 main skills -->
+              <div class="section__main-skill">
+                <!-- front end -->
+                <h3 class="skill__heading">Front-end</h3>
+                <ul class="skill__item">
+                  <li>
+                    <img
+                      src="./assets/icon/html.png"
+                      alt="html"
+                      class="icon"
+                    />HTML
+                  </li>
+                  <li>
+                    <img src="./assets/icon/css.png" alt="" class="icon" />CSS
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/javascript.png"
+                      alt="css"
+                      class="icon"
+                    />JavaScript
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/typescript.png"
+                      alt="typescript"
+                      class="icon"
+                    />Typescript
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/reactjs.png"
+                      alt="reactjs"
+                      class="icon"
+                    />React.js
+                  </li>
+                </ul>
+              </div>
+              <div class="section__main-skill">
+                <!-- Back-end -->
+                <h3 class="skill__heading">Back-end</h3>
+                <ul class="skill__item">
+                  <li>
+                    <img
+                      src="./assets/icon/nodejs.png"
+                      alt="nodejs"
+                      class="icon"
+                    />Node.js
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/mongodb.png"
+                      alt="mongodb"
+                      class="icon"
+                    />MongoDB
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/mysql.png"
+                      alt="mysql"
+                      class="icon"
+                    />MySQL
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/nextjs.png"
+                      alt="nextjs"
+                      class="icon"
+                    />Next.js
+                  </li>
+                </ul>
+              </div>
+              <div class="section__main-skill">
+                <!--DevOps/Deploy -->
+                <h3 class="skill__heading">Deploy</h3>
+                <ul class="skill__item">
+                  <li>
+                    <img
+                      src="./assets/icon/git.png"
+                      alt="git"
+                      class="icon"
+                    />GIT
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/gitlab.png"
+                      alt="GitLab"
+                      class="icon"
+                    />GitLab
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/vercel.png"
+                      alt="vercel"
+                      class="icon"
+                    />Vercel
+                  </li>
+                </ul>
+              </div>
+              <div class="section__main-skill">
+                <!-- Working flow/Tools -->
+                <h3 class="skill__heading">Tools</h3>
+                <ul class="skill__item">
+                  <li>
+                    <img
+                      src="./assets/icon/jira.png"
+                      alt="Jira"
+                      class="icon"
+                    />Jira
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/icon/confluence.png"
+                      alt="Confluence"
+                      class="icon"
+                    />Confluence
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- my projects -->
+      <div class="my__project">
+        <div class="main__container">
+          <!-- project section -->
+          <section id="project" class="section__project">
+            <div class="section__work">
+              <h2 class="heading__h2">Projects</h2>
+              <div class="project__container">
+                <!-- project 1 -->
+                <div class="project__container-desc">
+                  <img
+                    src="./assets/img/project-1.png"
+                    alt="first-project"
+                    class="project__img"
+                  />
+                  <h3 class="project__desc-heading">My Personal Website</h3>
+                  <p class="project__desc">
+                    A personal portfolio website built using HTML, CSS, and
+                    JavaScript. Showcases my projects and skills with a clean,
+                    responsive design for all devices.
+                  </p>
+                  <div class="project__btn">
+                    <button class="btn btn__livedemo">Github</button>
+                    <button class="btn btn__livedemo">Live Demo</button>
+                  </div>
+                </div>
+                <!-- project 2-->
+                <div class="project__container-desc">
+                  <img
+                    src="./assets/img/project-2.png"
+                    alt="first-project"
+                    class="project__img"
+                  />
+                  <h3 class="project__desc-heading">Todo List App</h3>
+                  <p class="project__desc">
+                    This Todo List app is built with HTML, CSS, JavaScript and
+                    Session storage. It allows users to add, edit, and delete
+                    tasks, providing a simple way to stay organized.
+                  </p>
+                  <div class="project__btn">
+                    <button class="btn btn__livedemo">Github</button>
+                    <button class="btn btn__livedemo">Live Demo</button>
+                  </div>
+                </div>
+
+                <!-- project 3-->
+                <div class="project__container-desc">
+                  <img
+                    src="./assets/img/project-3.png"
+                    alt="first-project"
+                    class="project__img"
+                  />
+                  <h3 class="project__desc-heading">Weather App</h3>
+                  <p class="project__desc">
+                    A weather app built with HTML, CSS, and JavaScript. It
+                    fetches live weather data from an API to provide up-to-date
+                    information on weather conditions.
+                  </p>
+                  <div class="project__btn">
+                    <button class="btn btn__livedemo">Github</button>
+                    <button class="btn btn__livedemo">Live Demo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- about me -->
+      <div class="about__me">
+        <div class="main__container">
+          <section id="about" class="section__about">
+            <div class="heading__h2">
+              <h2>About Me</h2>
+            </div>
+            <div class="about__content">
+              <!-- left side -->
+              <div class="about__media">
+                <img
+                  src="./assets/img/another-pic.jpg"
+                  alt=""
+                  class="about__profile"
+                />
+              </div>
+              <!-- right side -->
+              <div class="about__desc">
+                <!-- right top -->
+                <div class="about__desc-right">
+                  <div class="about__experience">
+                    <img
+                      src="./assets/icon/experience.png"
+                      alt="experience"
+                      class="icon"
+                    />
+                    <h4>Experience</h4>
+                    <p>1+ year</p>
+                    <p>Full-stack Development</p>
+                  </div>
+                  <div class="about__education">
+                    <img
+                      src="./assets/icon/education.png"
+                      alt="education"
+                      class="icon"
+                    />
+                    <h4>Education</h4>
+                    <p>B.Sc. Bachelors Degree</p>
+                    <p>M.Sc. Masters Cybersecurity Degree</p>
+                  </div>
+                </div>
+                <!-- right bottom -->
+                <div class="about__desc-para">
+                  <p>
+                    Welcome to my web developer portfolio! I'm Harry, a skilled
+                    and creative full-stack software developer with a passion
+                    for creating beautiful, responsive, and user-friendly
+                    websites UI/UX. I've worked on a variety of web projects,
+                    ranging from personal blogs to e-commerce platforms.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- contact me -->
+      <div class="contact__me">
+        <div class="main__container">
+          <section id="contact" class="section__contact">
+            <div class="heading__h2">
+              <h2>Contact Me</h2>
+            </div>
+            <div class="form__contact">
+              <form action="">
+                <div class="form__control">
+                  <label for="email">Email</label>
+
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+
+                <div class="form__control">
+                  <label for="note">Notes</label>
+                  <textarea name="" id="note"></textarea>
+                  <br />
+                </div>
+                <input type="submit" class="btn form__btn" />
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <nav class="container footer__nav">
+          <a href="#home">Home</a>
+          <a href="#project">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p>
+          <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+          <span class="nowrap">BTN.All rights reserved.</span>
+        </p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
